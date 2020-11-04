@@ -223,7 +223,7 @@ class YoBit(object):
         return self.__api_query_trade('CancelOrder', {'order_id': order_id})
 
     def trade_history(self, pair, from_start=0, count=1000, from_id=0, end_id=100000000000,
-                      order='DESC', since=0, end=time.time() + 1000):
+                      order='DESC', since=0, end=0):
         """
         Used to retrieve transaction history.
         Response contains list of transactions with pair, type,
